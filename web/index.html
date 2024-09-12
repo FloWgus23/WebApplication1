@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Ticket</h2>
+        <form action="ticketServlet" method="post">
+            <label for="ticketname">ชื่อ :</label>
+            <input type="text" id="ticketname" name="ticketname">
+            
+            <label for="tickettype">ประเภท :</label>
+            <select name="tickettype" id="tickettype">  
+                <option value="VIP">VIP</option>      
+                <option value="Gold">Gold</option> 
+                <option value="Standard">Standard</option> 
+            </select>
+            
+            <label>นักร้อง :</label>
+            <input type="checkbox" id="singer_dept" name="singer" value="DEPT">DEPT<br/>
+            <input type="checkbox" id="singer_mhuenploy" name="singer" value="MHUENPLOY">MHUENPLOY<br/>
+            <input type="checkbox" id="singer_deasy" name="singer" value="DEASY">DEASY<br/>
+            <input type="checkbox" id="singer_saran" name="singer" value="SARAN">SARAN<br/>
+            <input type="checkbox" id="singer_cornboi" name="singer" value="CORNBOI">CORNBOI<br/>
+            <input type="checkbox" id="singer_tmd" name="singer" value="TMD">TMD<br/>
+            
+            <label for="quantityname">จำนวนตั๋ว :</label>
+            <input type="text" id="quantityname" name="quantityname">
+            
+            <label for="pricename">ราคา :</label>
+            <input type="text" id="pricename" name="pricename">
+            
+            <input type="submit" value="สั่งซื้อ">
+        </form>
+    </div>
+</body>
+</html>
